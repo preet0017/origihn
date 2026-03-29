@@ -1,6 +1,7 @@
 import { Hero } from '../components/Hero'
 import { ProductCarousel } from '../components/ProductCarousel'
 import { BrandStory } from '../components/BrandStory'
+import { Quality } from '../components/Quality'
 import { productKits } from '../data/products'
 
 export function Home() {
@@ -9,6 +10,7 @@ export function Home() {
       <Hero />
       <ProductCarousel products={productKits.slice(0, 6)} />
       <BrandStory />
+      <Quality />
     </div>
   )
 }

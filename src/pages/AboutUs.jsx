@@ -38,7 +38,7 @@ export default function AboutUs() {
             <div className="lg:w-1/2 relative">
               <div className="aspect-square w-full rounded-[2.5rem] bg-white overflow-hidden relative shadow-2xl border border-primary-100 p-8 flex flex-col items-center justify-center text-center">
                  <div className="w-24 h-24 bg-primary-50 rounded-full flex items-center justify-center mb-6">
-                    <span className="font-serif text-4xl text-primary-800 italic">DP</span>
+                    <span className="font-serif text-4xl text-primary-800 italic">Origihn</span>
                  </div>
                  <h3 className="font-serif text-2xl text-primary-950 mb-4">Born in the Kitchen</h3>
                  <p className="text-primary-600">What started as cooking for three friends quickly grew into feeding hundreds of dedicated athletes every single day.</p>
