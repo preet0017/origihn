@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #fffdfb, #f4f3ee);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 text-white rounded-full font-semibold transition-all duration-200 shadow-lg;
+    background-color: #7A755E;
+  }
+
+  .btn-primary:hover {
+    background-color: #65614f;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border-2 text-primary-900 rounded-full font-semibold transition-all duration-200;
+    background-color: #FFFBF4;
+    border-color: #7A755E;
+  }
+
+  .btn-secondary:hover {
+    background-color: rgba(122, 117, 94, 0.15);
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4;
+  }
+}
