@@ -38,10 +38,10 @@ export function FilterPanel({ filters, onFilterChange }) {
   }
 
   return (
-    <div className="bg-white rounded-lg p-6 shadow-md space-y-6">
+    <div className="bg-white rounded-lg p-6 shadow-md space-y-6 border-l-4 border-origihn-green">
       {/* Category Filter */}
       <div>
-        <h3 className="text-lg font-bold text-primary-900 mb-3">Category</h3>
+        <h3 className="text-lg font-bold text-origihn-textPrimary mb-3">Category</h3>
         <div className="space-y-2">
           {categories.map(cat => (
             <label key={cat} className="flex items-center space-x-2 cursor-pointer">
@@ -50,17 +50,17 @@ export function FilterPanel({ filters, onFilterChange }) {
                 name="category"
                 checked={filters.category === null ? cat === 'All' : filters.category === cat}
                 onChange={() => handleCategoryChange(cat)}
-                className="w-4 h-4 text-primary-700"
+                className="w-4 h-4 text-origihn-red accent-origihn-red"
               />
-              <span className="text-primary-900">{cat}</span>
+              <span className="text-origihn-textPrimary">{cat}</span>
             </label>
           ))}
         </div>
       </div>
 
       {/* Price Filter */}
-      <div className="border-t pt-4">
-        <h3 className="text-lg font-bold text-primary-900 mb-3">Price Range</h3>
+      <div className="border-t border-origihn-green/20 pt-4">
+        <h3 className="text-lg font-bold text-origihn-textPrimary mb-3">Price Range</h3>
         <div className="space-y-2">
           {priceRanges.map(range => (
             <label key={range.label} className="flex items-center space-x-2 cursor-pointer">
@@ -69,17 +69,17 @@ export function FilterPanel({ filters, onFilterChange }) {
                 name="price"
                 checked={filters.priceMin === range.min && filters.priceMax === range.max}
                 onChange={() => handlePriceChange(range)}
-                className="w-4 h-4 text-primary-700"
+                className="w-4 h-4 text-origihn-red accent-origihn-red"
               />
-              <span className="text-primary-900">{range.label}</span>
+              <span className="text-origihn-textPrimary">{range.label}</span>
             </label>
           ))}
         </div>
       </div>
 
       {/* Protein Filter */}
-      <div className="border-t pt-4">
-        <h3 className="text-lg font-bold text-primary-900 mb-3">Protein Content</h3>
+      <div className="border-t border-origihn-green/20 pt-4">
+        <h3 className="text-lg font-bold text-origihn-textPrimary mb-3">Protein Content</h3>
         <div className="space-y-2">
           {proteinRanges.map(range => (
             <label key={range.label} className="flex items-center space-x-2 cursor-pointer">
@@ -88,9 +88,9 @@ export function FilterPanel({ filters, onFilterChange }) {
                 name="protein"
                 checked={filters.proteinMin === range.min && filters.proteinMax === range.max}
                 onChange={() => handleProteinChange(range)}
-                className="w-4 h-4 text-primary-700"
+                className="w-4 h-4 text-origihn-red accent-origihn-red"
               />
-              <span className="text-primary-900">{range.label}</span>
+              <span className="text-origihn-textPrimary">{range.label}</span>
             </label>
           ))}
         </div>

@@ -38,10 +38,10 @@ export function Products() {
   }, [filters])
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-origihn-cream py-8">
       <div className="container-custom">
-        <h1 className="text-4xl font-bold text-primary-950 mb-2">Products</h1>
-        <p className="text-primary-700 mb-8">Browse our complete collection of premium protein kits</p>
+        <h1 className="text-4xl font-bold text-origihn-textPrimary mb-2">Products</h1>
+        <p className="text-origihn-red mb-8">Browse our complete collection of premium protein kits</p>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Sidebar filters */}
@@ -59,7 +59,7 @@ export function Products() {
               </div>
             ) : (
               <div className="text-center py-12">
-                <p className="text-xl text-gray-500">No products match your filters</p>
+                <p className="text-xl text-origihn-textSecondary">No products match your filters</p>
                 <button
                   onClick={() => setFilters({
                     category: null,

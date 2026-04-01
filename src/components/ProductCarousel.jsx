@@ -19,11 +19,11 @@ export function ProductCarousel({ products = [] }) {
   }
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-origihn-cream">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-origihn-dark mb-2">New Arrivals</h2>
-          <p className="text-gray-600">Discover our latest high-protein kits</p>
+          <h2 className="text-4xl font-bold text-origihn-textPrimary mb-2">New Arrivals</h2>
+          <p className="text-origihn-textSecondary">Discover our latest high-protein kits</p>
         </div>
 
         {/* Carousel container */}
@@ -42,7 +42,7 @@ export function ProductCarousel({ products = [] }) {
           {/* Navigation buttons */}
           <button
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 bg-origihn-tan text-white p-2 rounded-full hover:bg-origihn-brown transition-colors z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 bg-origihn-red hover:bg-origihn-red/90 text-white p-2 rounded-full transition-all z-10 shadow-lg shadow-origihn-red/30 hover:shadow-origihn-red/50"
             aria-label="Previous"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@ export function ProductCarousel({ products = [] }) {
           </button>
           <button
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 bg-origihn-tan text-white p-2 rounded-full hover:bg-origihn-brown transition-colors z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 bg-origihn-red hover:bg-origihn-red/90 text-white p-2 rounded-full transition-all z-10 shadow-lg shadow-origihn-red/30 hover:shadow-origihn-red/50"
             aria-label="Next"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
 import { AuthProvider } from './context/AuthContext'
 import { CartProvider } from './context/CartContext'
-import { Navbar, Footer } from './components'
+import { Navbar, Footer, SplashScreen } from './components'
 import { Home } from './pages/Home'
 import { Products } from './pages/Products'
 import Build from './pages/Build'
@@ -15,8 +16,12 @@ import AboutUs from './pages/AboutUs'
 import './index.css'
 
 function App() {
+  const [showSplash, setShowSplash] = useState(true)
+
   return (
-    <BrowserRouter>
+    <>
+      {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
+      <BrowserRouter>
       <AuthProvider>
         <CartProvider>
           <div className="flex flex-col min-h-screen bg-white">
@@ -40,6 +45,7 @@ function App() {
         </CartProvider>
       </AuthProvider>
     </BrowserRouter>
+    </>
   )
 }
 

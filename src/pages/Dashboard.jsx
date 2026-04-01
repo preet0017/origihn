@@ -55,36 +55,36 @@ export function Dashboard() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-origihn-cream flex items-center justify-center">
         <div className="text-center">
-          <p className="text-xl text-gray-600">Loading...</p>
+          <p className="text-xl text-origihn-textSecondary">Loading...</p>
         </div>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-origihn-cream py-8">
       <div className="container-custom">
-        <h1 className="text-4xl font-bold text-origihn-dark mb-8">My Dashboard</h1>
+        <h1 className="text-4xl font-bold text-origihn-textPrimary mb-8">My Dashboard</h1>
 
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Profile Card */}
           <div className="bg-white rounded-lg p-6 shadow-md">
-            <h2 className="text-xl font-bold text-origihn-dark mb-4">Profile</h2>
+            <h2 className="text-xl font-bold text-origihn-textPrimary mb-4">Profile</h2>
             {profile && (
               <div className="space-y-4">
                 <div>
-                  <label className="text-sm text-gray-600">Email</label>
-                  <p className="text-lg font-semibold text-origihn-dark">{profile.email}</p>
+                  <label className="text-sm text-origihn-textSecondary">Email</label>
+                  <p className="text-lg font-semibold text-origihn-textPrimary">{profile.email}</p>
                 </div>
                 <div>
-                  <label className="text-sm text-gray-600">Name</label>
-                  <p className="text-lg font-semibold text-origihn-dark">{profile.name}</p>
+                  <label className="text-sm text-origihn-textSecondary">Name</label>
+                  <p className="text-lg font-semibold text-origihn-textPrimary">{profile.name}</p>
                 </div>
                 <div>
-                  <label className="text-sm text-gray-600">Member Since</label>
-                  <p className="text-lg font-semibold text-origihn-dark">{profile.createdAt}</p>
+                  <label className="text-sm text-origihn-textSecondary">Member Since</label>
+                  <p className="text-lg font-semibold text-origihn-textPrimary">{profile.createdAt}</p>
                 </div>
                 <button
                   onClick={handleSignOut}
@@ -98,15 +98,15 @@ export function Dashboard() {
 
           {/* Stats */}
           <div className="bg-white rounded-lg p-6 shadow-md">
-            <h2 className="text-xl font-bold text-origihn-dark mb-4">Statistics</h2>
+            <h2 className="text-xl font-bold text-origihn-textPrimary mb-4">Statistics</h2>
             <div className="space-y-4">
               <div>
-                <p className="text-sm text-gray-600">Total Orders</p>
-                <p className="text-3xl font-bold text-origihn-tan">{orders.length}</p>
+                <p className="text-sm text-origihn-textSecondary">Total Orders</p>
+                <p className="text-3xl font-bold text-origihn-textSecondary">{orders.length}</p>
               </div>
               <div>
-                <p className="text-sm text-gray-600">Total Spent</p>
-                <p className="text-3xl font-bold text-origihn-tan">
+                <p className="text-sm text-origihn-textSecondary">Total Spent</p>
+                <p className="text-3xl font-bold text-origihn-textSecondary">
                   ₹{orders.reduce((sum, order) => sum + order.total, 0)}
                 </p>
               </div>
@@ -115,7 +115,7 @@ export function Dashboard() {
 
           {/* Quick Actions */}
           <div className="bg-white rounded-lg p-6 shadow-md">
-            <h2 className="text-xl font-bold text-origihn-dark mb-4">Quick Actions</h2>
+            <h2 className="text-xl font-bold text-origihn-textPrimary mb-4">Quick Actions</h2>
             <div className="space-y-3">
               <a
                 href="/products"
@@ -135,34 +135,34 @@ export function Dashboard() {
 
         {/* Order History */}
         <div className="bg-white rounded-lg p-6 shadow-md">
-          <h2 className="text-2xl font-bold text-origihn-dark mb-6">Order History</h2>
+          <h2 className="text-2xl font-bold text-origihn-textPrimary mb-6">Order History</h2>
           {orders.length > 0 ? (
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
-                <thead className="border-b-2 border-origihn-tan">
+                <thead className="border-b-2 border-origihn-green/20">
                   <tr>
-                    <th className="text-left py-4 px-4 text-origihn-dark font-bold">Order ID</th>
-                    <th className="text-left py-4 px-4 text-origihn-dark font-bold">Date</th>
-                    <th className="text-left py-4 px-4 text-origihn-dark font-bold">Items</th>
-                    <th className="text-left py-4 px-4 text-origihn-dark font-bold">Total</th>
-                    <th className="text-left py-4 px-4 text-origihn-dark font-bold">Status</th>
-                    <th className="text-left py-4 px-4 text-origihn-dark font-bold">Action</th>
+                    <th className="text-left py-4 px-4 text-origihn-textPrimary font-bold">Order ID</th>
+                    <th className="text-left py-4 px-4 text-origihn-textPrimary font-bold">Date</th>
+                    <th className="text-left py-4 px-4 text-origihn-textPrimary font-bold">Items</th>
+                    <th className="text-left py-4 px-4 text-origihn-textPrimary font-bold">Total</th>
+                    <th className="text-left py-4 px-4 text-origihn-textPrimary font-bold">Status</th>
+                    <th className="text-left py-4 px-4 text-origihn-textPrimary font-bold">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   {orders.map(order => (
-                    <tr key={order.id} className="border-b border-gray-200 hover:bg-gray-50">
-                      <td className="py-4 px-4 font-semibold text-origihn-dark">{order.id}</td>
-                      <td className="py-4 px-4 text-gray-600">{order.date}</td>
-                      <td className="py-4 px-4 text-gray-600">{order.items}</td>
-                      <td className="py-4 px-4 font-semibold text-origihn-tan">₹{order.total}</td>
+                    <tr key={order.id} className="border-b border-origihn-green/20 hover:bg-origihn-cream/50">
+                      <td className="py-4 px-4 font-semibold text-origihn-textPrimary">{order.id}</td>
+                      <td className="py-4 px-4 text-origihn-textSecondary">{order.date}</td>
+                      <td className="py-4 px-4 text-origihn-textSecondary">{order.items}</td>
+                      <td className="py-4 px-4 font-semibold text-origihn-textSecondary">₹{order.total}</td>
                       <td className="py-4 px-4">
                         <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-semibold">
                           {order.status}
                         </span>
                       </td>
                       <td className="py-4 px-4">
-                        <button className="text-origihn-tan hover:text-origihn-brown font-semibold">
+                        <button className="text-origihn-textSecondary hover:text-origihn-textSecondary font-semibold">
                           View
                         </button>
                       </td>
@@ -173,7 +173,7 @@ export function Dashboard() {
             </div>
           ) : (
             <div className="text-center py-8">
-              <p className="text-gray-600 mb-4">No orders yet</p>
+              <p className="text-origihn-textSecondary mb-4">No orders yet</p>
               <a href="/products" className="btn-primary inline-block">
                 Start Shopping
               </a>

@@ -39,11 +39,11 @@ export function Signup() {
   }
 
   return (
-    <div className="min-h-screen bg-origihn-cream flex items-center justify-center py-8">
+    <div className="min-h-screen bg-origihn-bg flex items-center justify-center py-8">
       <div className="w-full max-w-md">
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-3xl font-bold text-origihn-dark mb-2 text-center">Join Origihn</h1>
-          <p className="text-center text-gray-600 mb-6">Create your account to start shopping</p>
+          <h1 className="text-3xl font-bold text-origihn-textPrimary mb-2 text-center">Join Origihn</h1>
+          <p className="text-center text-origihn-textSecondary mb-6">Create your account to start shopping</p>
 
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-6 text-sm">
@@ -53,7 +53,7 @@ export function Signup() {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block text-sm font-semibold text-origihn-dark mb-2">
+              <label className="block text-sm font-semibold text-origihn-textPrimary mb-2">
                 Email Address
               </label>
               <input
@@ -61,13 +61,13 @@ export function Signup() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-origihn-tan"
+                className="w-full px-4 py-2 border border-origihn-green/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-origihn-red/50"
                 placeholder="you@example.com"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-origihn-dark mb-2">
+              <label className="block text-sm font-semibold text-origihn-textPrimary mb-2">
                 Password
               </label>
               <input
@@ -75,13 +75,13 @@ export function Signup() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-origihn-tan"
+                className="w-full px-4 py-2 border border-origihn-green/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-origihn-red/50"
                 placeholder="••••••••"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-origihn-dark mb-2">
+              <label className="block text-sm font-semibold text-origihn-textPrimary mb-2">
                 Confirm Password
               </label>
               <input
@@ -89,7 +89,7 @@ export function Signup() {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-origihn-tan"
+                className="w-full px-4 py-2 border border-origihn-green/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-origihn-red/50"
                 placeholder="••••••••"
               />
             </div>
@@ -103,9 +103,9 @@ export function Signup() {
             </button>
           </form>
 
-          <p className="text-center mt-6 text-gray-600">
+          <p className="text-center mt-6 text-origihn-textSecondary">
             Already have an account?{' '}
-            <Link to="/login" className="text-origihn-tan font-semibold hover:text-origihn-brown">
+            <Link to="/login" className="text-origihn-textSecondary font-semibold hover:text-origihn-textSecondary">
               Sign In
             </Link>
           </p>
