@@ -1,6 +1,6 @@
 export default function AboutUs() {
   return (
-    <div className="pt-24 pb-24 bg-white min-h-screen">
+    <div className="pt-20 pb-20 bg-white min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden mb-24">
         <div className="absolute top-0 right-[-10%] w-[500px] h-[500px] bg-origihn-green/20 rounded-full blur-[100px] -z-10" />

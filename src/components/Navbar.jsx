@@ -44,7 +44,7 @@ export function Navbar() {
               About Us
             </Link>
             <Link to="/contact" className="text-origihn-textPrimary hover:text-origihn-red transition-colors font-medium">
-              Contact
+              Contact Us
             </Link>
           </div>
 

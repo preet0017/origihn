@@ -2,7 +2,7 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 export default function ContactUs() {
   return (
-    <div className="pt-24 pb-24 bg-[#F7F5F0] min-h-screen">
+    <div className="pt-20 pb-20 bg-[#F7F5F0] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Page Header */}

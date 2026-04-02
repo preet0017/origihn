@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export function Hero() {
   return (
-    <section className="min-h-[85vh] flex flex-col justify-center items-center text-center px-4 relative overflow-hidden bg-origihn-cream">
+    <section className="min-h-[90vh] flex flex-col justify-center items-center text-center px-4 relative overflow-hidden bg-origihn-cream">
       <div className="absolute top-0 right-[-10%] w-[500px] h-[500px] bg-origihn-pink/20 rounded-full blur-[100px] -z-10" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-origihn-yellow/10 rounded-full blur-[80px] -z-10" />
 

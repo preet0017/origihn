@@ -46,7 +46,7 @@ export default function BuildKit() {
     <div className="pt-32 pb-24 bg-[#F7F5F0] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 px-4">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-origihn-green/20 text-origihn-green text-xs font-bold tracking-wider uppercase mb-5 border border-origihn-green/30 shadow-sm">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-origihn-green text-origihn-textPrimary text-xs font-bold tracking-wider uppercase mb-5 border border-origihn-green/30 shadow-sm">
             Architect Your Diet
           </span>
           <h1 className="font-serif text-4xl md:text-6xl text-origihn-textPrimary mb-6 tracking-tight">Build Your Custom Kit</h1>
