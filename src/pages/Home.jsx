@@ -1,4 +1,4 @@
-import { HeroCarousel } from '../components/HeroCarousel'
+import { Hero } from '../components/Hero'
 import { HeroContent } from '../components/HeroContent'
 import { ProductCarousel } from '../components/ProductCarousel'
 import { BrandStory } from '../components/BrandStory'
@@ -8,7 +8,7 @@ import { productKits } from '../data/products'
 export function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <HeroCarousel />
+      <Hero />
       <ProductCarousel products={productKits.slice(0, 6)} />
       <HeroContent />
       <BrandStory />
