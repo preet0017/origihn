@@ -1,6 +1,8 @@
 export { Logo } from './Logo'
 export { Navbar } from './Navbar'
 export { Hero } from './Hero'
+export { HeroCarousel } from './HeroCarousel'
+export { HeroContent } from './HeroContent'
 export { ProductCard } from './ProductCard'
 export { ProductCarousel } from './ProductCarousel'
 export { FilterPanel } from './FilterPanel'

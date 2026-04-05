@@ -1,15 +1,31 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Logo } from './Logo'
 import { useAuth } from '../context/AuthContext'
 import { useCart } from '../context/CartContext'
+import orighinn from '../assets/image.png'// import {origihnn} from '../assets/image.png'
+import logoo from '../assets/logo.png'// import {origihnn} from '../assets/image.png'
 
 export function Navbar() {
   const { user, signOut } = useAuth()
   const { getTotalItems } = useCart()
   const navigate = useNavigate()
+  const location = useLocation()
   const [isOpen, setIsOpen] = useState(false)
   const cartCount = getTotalItems()
+
+  const linkClass = (path, isMobile = false) => {
+    const baseClasses = isMobile
+      ? 'block px-4 py-2 rounded transition-colors'
+      : 'transition-colors font-medium'
+
+    const activeClasses = 'text-origihn-red/80 font-semibold'
+    const inactiveClasses = isMobile
+      ? 'text-origihn-textPrimary hover:bg-origihn-green/20 hover:text-origihn-red'
+      : 'text-origihn-textPrimary hover:text-origihn-red'
+
+    return `${baseClasses} ${location.pathname === path ? activeClasses : inactiveClasses}`
+  }
 
   const handleSignOut = async () => {
     await signOut()
@@ -18,34 +34,29 @@ export function Navbar() {
   }
 
   return (
-    <nav className="sticky top-0 z-50 bg-origihn-cream/95 backdrop-blur-sm shadow-sm border-b border-origihn-green/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="sticky top-0 z-50 bg-white backdrop-blur-sm">
+      <div className="max-w-7xl mx-16 px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
             <div className="text-origihn-red group-hover:text-origihn-red/80 transition-colors">
-              <Logo className="w-10 h-10" />
+              <span className="text-2xl bg-red-500 font-bold font-serif text-origihn-textPrimary hidden sm:inline">
+              <div className='flex '>
+              <img src={logoo} className='w-28 h-16 '/> 
+              <img src={orighinn} className='w-44 h-16'/>
+              </div>
+            </span>
             </div>
-            <span className="text-2xl font-bold text-origihn-textPrimary hidden sm:inline">Origihn</span>
+            
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-origihn-textPrimary hover:text-origihn-red transition-colors font-medium">
-              Home
-            </Link>
-            <Link to="/products" className="text-origihn-textPrimary hover:text-origihn-red transition-colors font-medium">
-              Shop
-            </Link>
-            <Link to="/build" className="text-origihn-textPrimary hover:text-origihn-red transition-colors font-medium">
-              Build Your Own
-            </Link>
-            <Link to="/about" className="text-origihn-textPrimary hover:text-origihn-red transition-colors font-medium">
-              About Us
-            </Link>
-            <Link to="/contact" className="text-origihn-textPrimary hover:text-origihn-red transition-colors font-medium">
-              Contact Us
-            </Link>
+            <Link to="/" className={linkClass('/')}>Home</Link>
+            <Link to="/products" className={linkClass('/products')}>Shop</Link>
+            <Link to="/build" className={linkClass('/build')}>Build Your Own</Link>
+            <Link to="/about" className={linkClass('/about')}>About Us</Link>
+            <Link to="/contact" className={linkClass('/contact')}>Contact Us</Link>
           </div>
 
           {/* Right section */}
@@ -108,22 +119,12 @@ export function Navbar() {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden pb-4 space-y-2 bg-origihn-cream border-t border-origihn-green/10">
-            <Link to="/" className="block px-4 py-2 text-origihn-textPrimary hover:bg-origihn-green/20 hover:text-origihn-red rounded">
-              Home
-            </Link>
-            <Link to="/products" className="block px-4 py-2 text-origihn-textPrimary hover:bg-origihn-green/20 hover:text-origihn-red rounded">
-              Products
-            </Link>
-            <Link to="/build" className="block px-4 py-2 text-origihn-textPrimary hover:bg-origihn-green/20 hover:text-origihn-red rounded">
-              Build Your Own
-            </Link>
-            <Link to="/about" className="block px-4 py-2 text-origihn-textPrimary hover:bg-origihn-green/20 hover:text-origihn-red rounded">
-              About Us
-            </Link>
-            <Link to="/contact" className="block px-4 py-2 text-origihn-textPrimary hover:bg-origihn-green/20 hover:text-origihn-red rounded">
-              Contact
-            </Link>
+          <div className="md:hidden pb-4 space-y-2 bg-origihn-cream">
+            <Link to="/" className={linkClass('/', true)}>Home</Link>
+            <Link to="/products" className={linkClass('/products', true)}>Products</Link>
+            <Link to="/build" className={linkClass('/build', true)}>Build Your Own</Link>
+            <Link to="/about" className={linkClass('/about', true)}>About Us</Link>
+            <Link to="/contact" className={linkClass('/contact', true)}>Contact</Link>
             {user ? (
               <>
                 <Link to="/dashboard" className="block px-4 py-2 text-origihn-textPrimary hover:bg-origihn-green/20 hover:text-origihn-red rounded">
