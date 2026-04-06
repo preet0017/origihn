@@ -19,7 +19,7 @@ export function ProductCarousel({ products = [] }) {
   }
 
   return (
-    <section className="py-16 bg-origihn-cream">
+    <section id="new-arrivals" className="py-16 bg-origihn-cream">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-origihn-textPrimary mb-2">New Arrivals</h2>
