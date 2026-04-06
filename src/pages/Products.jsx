@@ -40,7 +40,7 @@ export function Products() {
   return (
     <div className="min-h-screen bg-origihn-cream py-8">
       <div className="container-custom">
-        <h1 className="text-4xl font-bold text-origihn-textPrimary mb-2">Products</h1>
+        <h1 className="text-4xl font-bold text-origihn-textPrimary mb-2">Protein Kits</h1>
         <p className="text-origihn-red mb-8">Browse our complete collection of premium protein kits</p>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">

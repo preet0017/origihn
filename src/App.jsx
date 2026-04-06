@@ -13,6 +13,7 @@ import { Dashboard } from './pages/Dashboard'
 import { NotFound } from './pages/NotFound'
 import ContactUs from './pages/ContactUs'
 import AboutUs from './pages/AboutUs'
+import ProductDetail from './pages/ProductDetail'
 import './index.css'
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
+                <Route path="/product/:id" element={<ProductDetail />} />
                 <Route path="/build" element={<Build />} />
                 <Route path="/about" element={<AboutUs />} />
                 <Route path="/contact" element={<ContactUs />} />

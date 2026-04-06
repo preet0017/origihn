@@ -10,7 +10,7 @@ export function Home() {
     <div className="min-h-screen bg-white">
       <Hero />
       <ProductCarousel products={productKits.slice(0, 6)} />
-      <HeroContent />
+      {/* <HeroContent /> */}
       <BrandStory />
       <Quality />
     </div>
