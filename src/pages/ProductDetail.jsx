@@ -138,8 +138,8 @@ export default function ProductDetail() {
                     onClick={() => setSelectedVariant(variant)}
                     className={`p-3 rounded-lg text-center transition-all ${
                       selectedVariant.id === variant.id
-                        ? 'bg-origihn-red text-white shadow-md shadow-origihn-red/30'
-                        : 'bg-origihn-cream text-origihn-textPrimary hover:bg-origihn-green/40 border border-origihn-green/20'
+                        ? 'bg-[#D97A2B] text-white shadow-md shadow-[#D97A2B]/30'
+                        : 'bg-transparent text-[#D97A2B] hover:bg-[#D97A2B]/10 border border-[#D97A2B]/50'
                     }`}
                   >
                     <div className="font-semibold">{variant.protein}g Protein</div>
@@ -159,13 +159,13 @@ export default function ProductDetail() {
             <div className="flex space-x-4">
               <button
                 onClick={handleBuyNow}
-                className="flex-1 bg-origihn-red hover:bg-origihn-red/90 text-white font-semibold py-3 px-6 rounded-lg transition-all shadow-md shadow-origihn-red/20 hover:shadow-lg hover:shadow-origihn-red/30"
+                className="flex-1 bg-[#D97A2B] hover:bg-[#D97A2B]/90 text-white font-semibold py-3 px-6 rounded-lg transition-all shadow-md shadow-[#D97A2B]/20 hover:shadow-lg hover:shadow-[#D97A2B]/30"
               >
                 Buy Now
               </button>
               <button
                 onClick={handleAddToCart}
-                className="flex-1 bg-origihn-green hover:bg-origihn-green/90 text-white font-semibold py-3 px-6 rounded-lg transition-all shadow-md shadow-origihn-green/20 hover:shadow-lg hover:shadow-origihn-green/30"
+                className="flex-1 bg-transparent text-[#D97A2B] border border-[#D97A2B] hover:bg-[#D97A2B]/10 font-semibold py-3 px-6 rounded-lg transition-all shadow-md"
               >
                 Add to Cart
               </button>

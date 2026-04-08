@@ -26,7 +26,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60" />
       <div className="absolute inset-0 bg-black/20" />
 
-      <div className="relative z-10 flex h-full items-center justify-center px-4 pb-30 pt-20 text-center ">
+      <div className="relative mx-20 z-10 flex h-full items-center justify-center px-4 pb-30 pt-20 text-center ">
         <div className="max-w-4xl mx-auto ">
           <span className="inline-block py-2 px-4 rounded-full bg-white/10 text-white text-xs font-bold uppercase tracking-[0.35em] mb-8 border border-white/20 shadow-lg shadow-black/20">
             Premium Natural Nutrition
@@ -39,7 +39,7 @@ export function Hero() {
             effortless daily rituals.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          {/* <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               to="/products"
               className="inline-flex items-center justify-center rounded-full bg-white px-10 py-4 text-sm font-semibold text-[#2A363B] transition-all duration-300 hover:brightness-95 shadow-xl shadow-black/25"
@@ -52,7 +52,7 @@ export function Hero() {
             >
               Build Your Own
             </Link>
-          </div>
+          </div> */}
           <button
             type="button"
             onClick={handleScroll}

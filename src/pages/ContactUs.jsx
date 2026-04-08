@@ -62,7 +62,7 @@ export default function ContactUs() {
                <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-origihn-yellow/20 rounded-full blur-[40px]" />
                <h3 className="font-serif text-2xl mb-4 italic">Partner With Us</h3>
                <p className="text-origihn-cream/70 text-sm mb-6 leading-relaxed">Are you a gym owner or nutritionist looking to provide high-quality protein meals to your clients?</p>
-               <button className="bg-origihn-red text-white px-6 py-3 rounded-full hover:bg-origihn-red/90 transition-all font-bold text-sm shadow-md">
+               <button className="bg-[#D97A2B] text-white px-6 py-3 rounded-full hover:bg-[#D97A2B]/90 transition-all font-bold text-sm shadow-md">
                  Wholesale Inquiries
                </button>
             </div>
@@ -100,7 +100,7 @@ export default function ContactUs() {
                   <textarea id="message" rows="5" className="w-full bg-[#F7F5F0] border border-origihn-green/20 rounded-xl px-5 py-4 focus:outline-none focus:border-origihn-red focus:ring-1 focus:ring-origihn-red/30 transition-all text-origihn-textPrimary resize-none" placeholder="Write your message here..."></textarea>
                 </div>
 
-                <button type="submit" className="w-full bg-origihn-red text-white px-8 py-4 rounded-xl hover:bg-origihn-red/90 hover:-translate-y-1 transition-all font-bold tracking-wide shadow-xl shadow-origihn-red/20 text-lg flex items-center justify-center gap-2">
+                <button type="submit" className="w-full bg-[#D97A2B] text-white px-8 py-4 rounded-xl hover:bg-[#D97A2B]/90 hover:-translate-y-1 transition-all font-bold tracking-wide shadow-xl shadow-[#D97A2B]/20 text-lg flex items-center justify-center gap-2">
                   <Send className="w-5 h-5" /> Send Message
                 </button>
 

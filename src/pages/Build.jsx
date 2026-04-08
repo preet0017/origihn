@@ -101,7 +101,7 @@ export default function BuildKit() {
                   <span className="font-bold w-6 text-center text-origihn-textPrimary font-serif text-lg\">{selections[item.id] || 0}</span>
                   <button
                     onClick={() => handleUpdate(item.id, 1)}
-                    className="w-10 h-10 flex justify-center items-center rounded-full bg-origihn-red text-white shadow-sm hover:bg-origihn-red/90 active:scale-95 transition-all\"
+                    className="w-10 h-10 flex justify-center items-center rounded-full bg-[#D97A2B] text-white shadow-sm hover:bg-[#D97A2B]/90 active:scale-95 transition-all\"
                   >
                     <Plus className="w-4 h-4" />
                   </button>
@@ -138,7 +138,7 @@ export default function BuildKit() {
                <button
                   onClick={handleAddKit}
                   disabled={totalProtein === 0}
-                  className="w-full bg-origihn-red text-white font-bold text-lg py-5 rounded-full flex justify-center items-center gap-3 hover:bg-origihn-red/90 active:scale-95 transition-all disabled:opacity-50 disabled:hover:scale-100 disabled:hover:bg-origihn-red disabled:cursor-not-allowed shadow-lg shadow-origihn-red/30"
+                  className="w-full bg-[#D97A2B] text-white font-bold text-lg py-5 rounded-full flex justify-center items-center gap-3 hover:bg-[#D97A2B]/90 active:scale-95 transition-all disabled:opacity-50 disabled:hover:scale-100 disabled:hover:bg-[#D97A2B] disabled:cursor-not-allowed shadow-lg shadow-[#D97A2B]/30"
                >
                  <ShoppingBag className="w-6 h-6" />
                  Add Custom Kit

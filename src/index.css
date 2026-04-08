@@ -24,21 +24,22 @@ h1, h2, h3, h4, h5, h6 {
 @layer components {
   .btn-primary {
     @apply px-6 py-3 text-white rounded-full font-semibold transition-all duration-200 shadow-lg;
-    background-color: #7A755E;
+    background-color: #D97A2B;
   }
 
   .btn-primary:hover {
-    background-color: #65614f;
+    background-color: #c66a23;
   }
 
   .btn-secondary {
-    @apply px-6 py-3 border-2 text-primary-900 rounded-full font-semibold transition-all duration-200;
-    background-color: #FFFBF4;
-    border-color: #7A755E;
+    @apply px-6 py-3 border-2 rounded-full font-semibold transition-all duration-200;
+    background-color: transparent;
+    border-color: #D97A2B;
+    color: #D97A2B;
   }
 
   .btn-secondary:hover {
-    background-color: rgba(122, 117, 94, 0.15);
+    background-color: rgba(217, 122, 43, 0.1);
   }
 
   .card {
@@ -47,5 +48,14 @@ h1, h2, h3, h4, h5, h6 {
 
   .container-custom {
     @apply max-w-7xl mx-auto px-4;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }

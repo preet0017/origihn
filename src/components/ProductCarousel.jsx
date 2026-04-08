@@ -30,10 +30,10 @@ export function ProductCarousel({ products = [] }) {
         <div className="relative">
           <div
             id="product-carousel"
-            className="flex overflow-x-hidden gap-6 snap-x scroll-smooth pb-4"
+            className="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth pb-4 hide-scrollbar px-2"
           >
             {(products.length > 0 ? products : []).map(product => (
-              <div key={product.id} className="flex-none w-full md:w-1/2 lg:w-1/3 snap-center">
+              <div key={product.id} className="flex-shrink-0 w-[300px] sm:w-[320px] snap-center">
                 <ProductCard product={product} />
               </div>
             ))}
@@ -42,7 +42,7 @@ export function ProductCarousel({ products = [] }) {
           {/* Navigation buttons */}
           <button
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 bg-origihn-red hover:bg-origihn-red/90 text-white p-2 rounded-full transition-all z-10 shadow-lg shadow-origihn-red/30 hover:shadow-origihn-red/50"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 bg-[#D97A2B] hover:bg-[#D97A2B]/90 text-white p-2 rounded-full transition-all z-10 shadow-lg shadow-[#D97A2B]/30 hover:shadow-[#D97A2B]/50"
             aria-label="Previous"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@ export function ProductCarousel({ products = [] }) {
           </button>
           <button
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 bg-origihn-red hover:bg-origihn-red/90 text-white p-2 rounded-full transition-all z-10 shadow-lg shadow-origihn-red/30 hover:shadow-origihn-red/50"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 bg-[#D97A2B] hover:bg-[#D97A2B]/90 text-white p-2 rounded-full transition-all z-10 shadow-lg shadow-[#D97A2B]/30 hover:shadow-[#D97A2B]/50"
             aria-label="Next"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
