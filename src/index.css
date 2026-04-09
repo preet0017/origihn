@@ -58,4 +58,8 @@ h1, h2, h3, h4, h5, h6 {
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  .product-card:hover .product-card-image {
+    transform: scale(1.1);
+  }
 }

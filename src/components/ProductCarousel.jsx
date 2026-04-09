@@ -22,15 +22,15 @@ export function ProductCarousel({ products = [] }) {
     <section id="new-arrivals" className="py-16 my-20 bg-origihn-cream">
       <div className="container-custom">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-origihn-textPrimary mb-2">New Arrivals</h2>
-          <p className="text-origihn-textSecondary">Discover our latest high-protein kits</p>
+          <h2 className="text-4xl font-bold text-origihn-textPrimary mb-2">Protein Kits</h2>
+          <p className="text-origihn-textSecondary">Discover our high-protein kits</p>
         </div>
 
         {/* Carousel container */}
-        <div className="relative">
+        <div className="relative group px-6 md:px-8">
           <div
             id="product-carousel"
-            className="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth pb-4 hide-scrollbar px-2"
+            className="flex overflow-x-auto gap-6 snap-x snap-mandatory scroll-smooth pb-4 hide-scrollbar"
           >
             {(products.length > 0 ? products : []).map(product => (
               <div key={product.id} className="flex-shrink-0 w-[300px] sm:w-[320px] snap-center">
@@ -42,19 +42,19 @@ export function ProductCarousel({ products = [] }) {
           {/* Navigation buttons */}
           <button
             onClick={() => scroll('left')}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 bg-[#D97A2B] hover:bg-[#D97A2B]/90 text-white p-2 rounded-full transition-all z-10 shadow-lg shadow-[#D97A2B]/30 hover:shadow-[#D97A2B]/50"
+            className="absolute left-[-26px] top-1/2 -translate-y-1/2 bg-[#D97A2B] text-white w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 shadow-lg shadow-[#D97A2B]/30 hover:scale-110 hover:bg-[#D97A2B]/90 active:scale-95 z-10 opacity-0 translate-x-[-6px] group-hover:opacity-100 group-hover:translate-x-0 pointer-events-none group-hover:pointer-events-auto"
             aria-label="Previous"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           <button
             onClick={() => scroll('right')}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 bg-[#D97A2B] hover:bg-[#D97A2B]/90 text-white p-2 rounded-full transition-all z-10 shadow-lg shadow-[#D97A2B]/30 hover:shadow-[#D97A2B]/50"
+            className="absolute right-[-26px] top-1/2 -translate-y-1/2 bg-[#D97A2B] text-white w-10 h-10 flex items-center justify-center rounded-full transition-all duration-300 shadow-lg shadow-[#D97A2B]/30 hover:scale-110 hover:bg-[#D97A2B]/90 active:scale-95 z-10 opacity-0 -translate-x-[-6px] group-hover:opacity-100 group-hover:-translate-x-0 pointer-events-none group-hover:pointer-events-auto"
             aria-label="Next"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>

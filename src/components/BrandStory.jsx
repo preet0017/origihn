@@ -67,7 +67,7 @@ export function BrandStory() {
         </div>
 
         {/* Stats */}
-        <div className="mt-16 pt-16 border-t border-origihn-green/20 grid grid-cols-3 gap-8 text-center">
+        {/* <div className="mt-16 pt-16 border-t border-origihn-green/20 grid grid-cols-3 gap-8 text-center">
           <div>
             <p className="text-4xl font-bold text-origihn-red mb-2">100%</p>
             <p className="text-origihn-textPrimary font-semibold">Natural Ingredients</p>
@@ -80,7 +80,7 @@ export function BrandStory() {
             <p className="text-4xl font-bold text-origihn-red mb-2">500+</p>
             <p className="text-origihn-textPrimary font-semibold">Happy Customers</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

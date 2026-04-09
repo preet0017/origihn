@@ -29,7 +29,7 @@ export function ProductCard({ product }) {
 
   return (
     <div
-      className="overflow-hidden flex flex-col bg-white border border-origihn-green/20 rounded-3xl shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl cursor-pointer"
+      className="product-card overflow-hidden flex flex-col bg-white border border-origihn-green/20 rounded-3xl shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl cursor-pointer"
       onClick={handleCardClick}
     >
       {/* Product Image */}
@@ -37,7 +37,7 @@ export function ProductCard({ product }) {
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-110"
+          className="product-card-image w-full h-full object-cover transition-transform duration-500 ease-in-out"
         />
       </div>
 
