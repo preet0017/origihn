@@ -38,12 +38,12 @@ export function Products() {
   }, [filters])
 
   return (
-    <div className="min-h-screen bg-origihn-cream py-8">
-      <div className="container-custom">
-        <h1 className="text-4xl font-bold text-origihn-textPrimary mb-2">Protein Kits</h1>
-        <p className="text-origihn-red mb-8">Browse our complete collection of premium protein kits</p>
+    <div className="min-h-screen bg-origihn-cream py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-origihn-textPrimary mb-1 sm:mb-2">Protein Kits</h1>
+        <p className="text-sm sm:text-base text-origihn-red mb-6 sm:mb-8">Browse our complete collection of premium protein kits</p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-8">
           {/* Sidebar filters */}
           <div className="lg:col-span-1">
             <FilterPanel filters={filters} onFilterChange={setFilters} />
@@ -52,14 +52,14 @@ export function Products() {
           {/* Products grid */}
           <div className="lg:col-span-3">
             {filteredProducts.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6">
                 {filteredProducts.map(product => (
                   <ProductCard key={product.id} product={product} />
                 ))}
               </div>
             ) : (
               <div className="text-center py-12">
-                <p className="text-xl text-origihn-textSecondary">No products match your filters</p>
+                <p className="text-base sm:text-lg md:text-xl text-origihn-textSecondary">No products match your filters</p>
                 <button
                   onClick={() => setFilters({
                     category: null,
@@ -68,7 +68,7 @@ export function Products() {
                     proteinMin: 0,
                     proteinMax: Infinity,
                   })}
-                  className="btn-primary mt-4"
+                  className="btn-primary mt-4 text-sm sm:text-base"
                 >
                   Clear Filters
                 </button>

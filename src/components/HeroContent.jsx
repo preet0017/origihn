@@ -2,16 +2,16 @@ import { Link } from 'react-router-dom'
 
 export function HeroContent() {
   return (
-    <section className="py-16 md:py-24 px-4 bg-white">
+    <section className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-        <span className="inline-block py-1.5 px-4 rounded-full bg-origihn-green text-origihn-textPrimary text-xs font-bold tracking-widest uppercase mb-8 border border-origihn-green/30 shadow-sm">
+        <span className="inline-block py-1 sm:py-1.5 px-3 sm:px-4 rounded-full bg-origihn-green text-origihn-textPrimary text-xs font-bold tracking-widest uppercase mb-4 sm:mb-8 border border-origihn-green/30 shadow-sm">
           Handcrafted Nutrition
         </span>
-        <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold mb-8 tracking-tight text-origihn-textPrimary leading-[1.1]">
+        <h2 className="font-serif text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-8 tracking-tight text-origihn-textPrimary leading-[1.1]">
           Fuel your body.<br />
           <span className="text-origihn-red italic">Simplify your life.</span>
         </h2>
-        <p className="text-lg md:text-2xl text-origihn-textSecondary max-w-2xl mb-12 leading-relaxed">
+        <p className="text-sm sm:text-base md:text-lg lg:text-2xl text-origihn-textSecondary max-w-2xl mb-8 md:mb-12 leading-relaxed px-2">
           Premium, home-made high protein kits delivered to your door.
           From 100g to 200g of pure protein perfectly portioned to crush your goals.
         </p>
