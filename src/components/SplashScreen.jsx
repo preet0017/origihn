@@ -168,7 +168,7 @@ export function SplashScreen({ onComplete }) {
         {/* Text Block Layer */}
         <div className="flex flex-col items-center text-center mt-2 w-full z-10">
           <h1 className="title-origihn font-serif text-5xl md:text-6xl text-origihn-textPrimary tracking-wide opacity-0">
-            Origihn
+            Kitsta
           </h1>
           <p className="subtitle-protein font-sans mt-3 text-sm md:text-base text-origihn-red tracking-[0.3em] uppercase opacity-0 font-semibold leading-normal">
             Protein Brand

@@ -11,7 +11,7 @@ export function Footer() {
               <div className="text-origihn-red">
                 <Logo className="w-6 h-6 sm:w-8 sm:h-8" />
               </div>
-              <span className="text-lg sm:text-xl font-bold text-white">Origihn</span>
+              <span className="text-lg sm:text-xl font-bold text-white">Kitsta</span>
             </div>
             <p className="text-origihn-cream/70 text-xs sm:text-sm leading-relaxed">Premium high-protein kits for a healthier you.</p>
           </div>

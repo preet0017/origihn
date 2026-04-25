@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import orighinblack from "../assets/logo-white.png";
-import originwhite from "../assets/logo-black.png";
+import kitstalogo_white from "../assets/kitsta_logo_white.png";
+import kitstalogo_black from "../assets/kitsta_logo_black.png";
 // import logoo from '../assets/logo.png'
 
 export function Navbar() {
@@ -84,7 +84,7 @@ export function Navbar() {
           <Link to="/" className="absolute left-4 md:left-8 flex items-center transition-all duration-300">
             <div className="flex items-center gap-2">
               <img
-                src={isHeroVisible ? orighinblack : originwhite}
+                src={isHeroVisible ? kitstalogo_white : kitstalogo_black}
                 alt="Origihn logo"
                 className="h-12 w-auto transition-all duration-300"
               />
@@ -151,7 +151,7 @@ export function Navbar() {
         <div className="flex flex-col h-full">
           <div className="flex justify-between items-center p-4 border-b border-gray-200">
             <img
-              src={originwhite}
+              src={kitstalogo_black}
               alt="Origihn logo"
               className="h-10 w-auto"
             />
