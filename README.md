@@ -1,4 +1,4 @@
-# Origihn - Premium High Protein Food Kits
+# Kitsta - Premium High Protein Food Kits
 
 A modern e-commerce website for premium high-protein meal kits built with React, Vite, Tailwind CSS, and Supabase.
 
@@ -23,7 +23,7 @@ A modern e-commerce website for premium high-protein meal kits built with React,
 
 1. **Clone or extract the project**
 ```bash
-cd origihn
+cd kitsta
 ```
 
 2. **Install dependencies**
